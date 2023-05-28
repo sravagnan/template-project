@@ -8,7 +8,7 @@
   <h3 align="center"> TEMPLATE PROJECT</h3>
 
   <p align="center">
-    <a href="https://github.com/energiacollettiva/MVP/issues">Report Bug/Request Feature</a>
+    <a href="https://github.com/sravagnan/template-project/issues">Report Bug/Request Feature</a>
   </p>
 </div>
 
@@ -123,6 +123,6 @@ pre-commit install
 
 Stefano Ravagnan - stefano.ravagnan@outlook.com
 
-Project Link: [https://github.com/energiacollettiva/MVP](https://github.com/energiacollettiva/MVP)
+Project Link: [https://github.com/sravagnan/template-project](https://github.com/sravagnan/template-project)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
