@@ -1,0 +1,39 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        entry: trailing-whitespace-fixer
+        language: python
+        types: [text]
+      - id: check-added-large-files
+      - id: check-ast
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v0.910'
+    hooks:
+      - id: mypy
+      args: [--config-file=src/configs/mypy.ini]
+  - repo: https://github.com/PyCQA/pylint
+    rev: pylint-2.8.2
+    hooks:
+      - id: pylint
+        args: [--rcfile=src/configs/pylintrc]
+  - repo: https://github.com/psf/black
+    rev: '20.8b1'
+    hooks:
+      - id: black
+      args: [--config=pyproject.toml]
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.10.2
+    hooks:
+      - id: isort
+  - repo: https://github.com/PyCQA/coverage-hooks
+    rev: 'v1.0.1'
+    hooks:
+      - id: coverage
+      args: [--rcfile=src/configs/.coveragerc]
+
+# Specify the files you want to include for the checks
+exclude: '^$'  # Exclude empty filenames
