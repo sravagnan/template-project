@@ -1,0 +1,86 @@
+site_name: My Documentation
+site_description: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+site_url: https://example.com/
+
+theme:
+  name: material
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: blue
+    accent: amber
+    toggle:
+      icon: material/brightness-7
+      name: Switch to light mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: blue
+    accent: amber
+    toggle:
+      icon: material/brightness-4
+      name: Switch to dark mode
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github-alt
+  logo: https://fastapi.tiangolo.com/img/icon-white.svg
+  favicon: img/favicon.ico
+  language: en
+
+repo_name: tiangolo/fastapi
+repo_url: https://github.com/tiangolo/fastapi
+edit_uri: ''
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Wrinting your docs: 'user-guide/ciao.md'
+  - About: about.md
+
+
+markdown_extensions:
+- toc:
+    permalink: true
+- markdown.extensions.codehilite:
+    guess_lang: false
+- mdx_include:
+    base_path: docs
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+- pymdownx.tabbed:
+    alternate_style: true
+- attr_list
+- md_in_html
+
+extra:
+  analytics:
+    provider: google
+    property: G-YNEVN69SC3
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/tiangolo/fastapi
+  - icon: fontawesome/brands/discord
+    link: https://discord.gg/VQjSZaeJmf
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/fastapi
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/tiangolo
+  - icon: fontawesome/brands/dev
+    link: https://dev.to/tiangolo
+  - icon: fontawesome/brands/medium
+    link: https://medium.com/@tiangolo
+  - icon: fontawesome/solid/globe
+    link: https://tiangolo.com
+
+extra_css:
+- css/termynal.css
+- css/custom.css
+extra_javascript:
+- js/termynal.js
+- js/custom.js

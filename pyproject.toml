@@ -16,7 +16,11 @@ readme = "README.md"
 
 dependencies = [
     "nox==2022.8.7",
-    "pre_commit==3.1.1"
+    "pre_commit==3.1.1",
+    "mkdocs",
+    "mkdocs[i18n]",
+    "mkdocs-material",
+    "mdx-include"
 ]
 
 [project.optional-dependencies]
@@ -44,5 +48,3 @@ omit = []
 [tool.coverage.report]
 show_missing = true
 fail_under = 80
-
-
