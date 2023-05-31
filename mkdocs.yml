@@ -1,6 +1,8 @@
 site_name: My Documentation
 site_description: FastAPI framework, high performance, easy to learn, fast to code, ready for production
 site_url: https://example.com/
+docs_dir: mkdoc
+site_dir: docs
 
 theme:
   name: material
