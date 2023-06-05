@@ -29,6 +29,90 @@
 
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.
 
+The key features are:
+
+* **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic). [One of the fastest Python frameworks available](#performance).
+* **Fast to code**: Increase the speed to develop features by about 200% to 300%. *
+* **Fewer bugs**: Reduce about 40% of human (developer) induced errors. *
+* **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
+* **Easy**: Designed to be easy to use and learn. Less time reading docs.
+* **Short**: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
+* **Robust**: Get production-ready code. With automatic interactive documentation.
+* **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (previously known as Swagger) and <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
+
+<small>* estimation based on tests on an internal development team, building production applications.</small>
+
+## Sponsors
+
+<!-- sponsors -->
+
+{% if sponsors %}
+{% for sponsor in sponsors.gold -%}
+<a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
+{% endfor -%}
+{%- for sponsor in sponsors.silver -%}
+<a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
+{% endfor %}
+{% endif %}
+
+<!-- /sponsors -->
+
+<a href="https://fastapi.tiangolo.com/fastapi-people/#sponsors" class="external-link" target="_blank">Other sponsors</a>
+
+## Opinions
+
+"_[...] I'm using **FastAPI** a ton these days. [...] I'm actually planning to use it for all of my team's **ML services at Microsoft**. Some of them are getting integrated into the core **Windows** product and some **Office** products._"
+
+<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/tiangolo/fastapi/pull/26" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_We adopted the **FastAPI** library to spawn a **REST** server that can be queried to obtain **predictions**. [for Ludwig]_"
+
+<div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - <strong>Uber</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_**Netflix** is pleased to announce the open-source release of our **crisis management** orchestration framework: **Dispatch**! [built with **FastAPI**]_"
+
+<div style="text-align: right; margin-right: 10%;">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>Netflix</strong> <a href="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_I’m over the moon excited about **FastAPI**. It’s so fun!_"
+
+<div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> podcast host</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_Honestly, what you've built looks super solid and polished. In many ways, it's what I wanted **Hug** to be - it's really inspiring to see someone build that._"
+
+<div style="text-align: right; margin-right: 10%;">Timothy Crosley - <strong><a href="https://www.hug.rest/" target="_blank">Hug</a> creator</strong> <a href="https://news.ycombinator.com/item?id=19455465" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_If you're looking to learn one **modern framework** for building REST APIs, check out **FastAPI** [...] It's fast, easy to use and easy to learn [...]_"
+
+"_We've switched over to **FastAPI** for our **APIs** [...] I think you'll like it [...]_"
+
+<div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong><a href="https://explosion.ai" target="_blank">Explosion AI</a> founders - <a href="https://spacy.io" target="_blank">spaCy</a> creators</strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+"_If anyone is looking to build a production Python API, I would highly recommend **FastAPI**. It is **beautifully designed**, **simple to use** and **highly scalable**, it has become a **key component** in our API first development strategy and is driving many automations and services such as our Virtual TAC Engineer._"
+
+<div style="text-align: right; margin-right: 10%;">Deon Pillsbury - <strong>Cisco</strong> <a href="https://www.linkedin.com/posts/deonpillsbury_cisco-cx-python-activity-6963242628536487936-trAp/" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+## **Typer**, the FastAPI of CLIs
+
+<a href="https://typer.tiangolo.com" target="_blank"><img src="https://typer.tiangolo.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
+
+If you are building a <abbr title="Command Line Interface">CLI</abbr> app to be used in the terminal instead of a web API, check out <a href="https://typer.tiangolo.com/" class="external-link" target="_blank">**Typer**</a>.
+
+**Typer** is FastAPI's little sibling. And it's intended to be the **FastAPI of CLIs**. ⌨️ 🚀
+
 ## Requirements
 
 Python 3.7+
@@ -40,66 +124,27 @@ FastAPI stands on the shoulders of giants:
 
 ## Installation
 
-Create a new virtual environment by running the command below:
-
 <div class="termy">
 
 ```console
-$ python -m venv .venv
-
----> 100%
-```
-</div>
-
-Activate it in a Linux enviroment by running:
-
-<div class="termy">
-
-```console
-$ source .venv/bin/activate
-
-```
-
-</div>
-
-or in a Windows enviroment by running:
-
-<div class="termy">
-
-```console
-$ .venv\Scripts\activate
-
-```
-
-</div>
-
-### Compile dependencies
-
-Run the following command to install <a href="https://github.com/jazzband/pip-tools" target="_blank"><code>pip-tools</code></a> that is required to compile the requirements.txt
-
-<div class="termy">
-
-```console
-$ pip install pip-tools
+$ pip install fastapi
 
 ---> 100%
 ```
 
 </div>
 
-In order to compile the `requirements.txt` file based on a <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>pyproject.toml</code></a> file, run the following command:
+You will also need an ASGI server, for production such as <a href="https://www.uvicorn.org" class="external-link" target="_blank">Uvicorn</a> or <a href="https://github.com/pgjones/hypercorn" class="external-link" target="_blank">Hypercorn</a>.
 
 <div class="termy">
 
 ```console
-$ pip-compile --resolver=backtracking --output-file=requirements.txt pyproject.toml
+$ pip install "uvicorn[standard]"
 
 ---> 100%
 ```
 
 </div>
-
-The `pip-compile` command lets you compile a `requirements.txt` file from your dependencies, specified in `pyproject.toml`.
 
 ## Example
 

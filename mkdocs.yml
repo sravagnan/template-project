@@ -1,5 +1,5 @@
-site_name: My Documentation
-site_description: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+site_name: Template Project
+site_description: A prodaction ready project template
 site_url: https://example.com/
 docs_dir: mkdoc
 site_dir: docs
@@ -31,14 +31,14 @@ theme:
   favicon: img/favicon.ico
   language: en
 
-repo_name: tiangolo/fastapi
-repo_url: https://github.com/tiangolo/fastapi
+repo_name: sravagnan/template-project
+repo_url: https://github.com/sravagnan/template-project
 edit_uri: ''
 plugins:
   - search
 
 nav:
-  - Home: index.md
+  - Getting Started: index.md
   - User Guide:
     - Wrinting your docs: 'user-guide/ciao.md'
   - About: about.md
