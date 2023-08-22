@@ -59,7 +59,6 @@ Activate it in a Linux enviroment by running:
 $ source .venv/bin/activate
 
 ```
-
 </div>
 
 or in a Windows enviroment by running:
@@ -70,7 +69,6 @@ or in a Windows enviroment by running:
 $ .venv\Scripts\activate
 
 ```
-
 </div>
 
 ### Compile dependencies
@@ -84,7 +82,6 @@ $ pip install pip-tools
 
 ---> 100%
 ```
-
 </div>
 
 In order to compile the `requirements.txt` file based on a <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>pyproject.toml</code></a> file, run the following command:
@@ -96,7 +93,6 @@ $ pip-compile --resolver=backtracking --output-file=requirements.txt pyproject.t
 
 ---> 100%
 ```
-
 </div>
 
 The `pip-compile` command lets you compile a `requirements.txt` file from your dependencies, specified in `pyproject.toml`.

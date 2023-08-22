@@ -13,6 +13,7 @@ logfile.log
 **/*.pyc
 .nox
 .git
+poetry.lock
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode
