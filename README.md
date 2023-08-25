@@ -119,6 +119,17 @@ In order to initialize the environment for pre-commit-hooks run the following co
 pre-commit install
 ```
 
+### Run tests
+
+In order to run tests with coverage report run this command:
+
+```sh
+pytest -v -W ignore --cov=. --cov-config=config/.coveragerc tests/
+```
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Contact
 
 Stefano Ravagnan - stefano.ravagnan@outlook.com
